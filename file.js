@@ -16,11 +16,7 @@ window.addEventListener('scroll', (e) => {
     
     let nav = document.querySelector('.nav-wrapper');
     
-    if (window.scrollY > 0) {
-        nav.style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.1)";
-    } else {
-        nav.style.boxShadow = "0 0px 0px 0 rgba(0, 0, 0, 0)";
-    }
+    nav.style.boxShadow = window.scrollY > 0 ? "0 4px 8px 0 rgba(0, 0, 0, 0.1)" : "0 0px 0px 0 rgba(0, 0, 0, 0)";
 
 });
 
