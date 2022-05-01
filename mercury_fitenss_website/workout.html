@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="nav-wrapper" id="nav-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Fitness-Logo-PNG-HD-Quality.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="workout.html">Workout Routine</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="sign-btn">
+                <a href="#">Sign in</a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Code the content inside main tags -->
+
+    <main>
+
+        <h2 class="workout">Choose your workout routine</h2>
+
+        <div class="card-wrapper">
+            <div class="card" onclick="activatePopup()">
+                <h3>Workout/Body Build</h3>
+                <p>Strenuous physical exercise to build and strengthen muscles</p>
+            </div>
+            <div class="card" onclick="activatePopup()">
+                <h3>Lose weight</h3>
+                <p>Reducing your body weight from obese/overweight to a slimmer shape</p>
+            </div>
+            <div class="card" onclick="activatePopup()">
+                <h3>Toning</h3>
+                <p>Exercises to help you ease up on fat and gaining more energy by tightening up muscles and giving them shape</p>
+            </div>
+        </div>
+
+
+        <div class="popUp" id="popUp">
+            <div class="overlay" id="overlay" onclick="deactivaePopup()">
+            </div>
+            <div class="inner-pop" id="inner-pop">
+                <h2>Pick The Intensity of Your Training</h2>
+                <div class="btn-intensity">
+                    <button id="btn1">Intense</button>
+                    <button id="btn2">Relaxed</button>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </main>
+
+    <footer>
+
+        <!-- adding automatically generated year to avoid having to change the date when new year starts -->
+
+        Copyright &copy;
+
+        <script>document.write(new Date().getFullYear())</script>
+
+        Mercury Fitness
+
+    </footer>
+    
+    <script src="file.js"></script>
+</body>
+</html>
