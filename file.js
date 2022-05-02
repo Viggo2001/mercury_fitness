@@ -3,19 +3,18 @@ let inPop = document.getElementById('inner-pop');
 
 let activatePopup = (e) => {
     popId.style.display = "block";
-    popId.style.transition = "ease-in";
-    inPop.style.transition = "0.3s";
+    inPop.style.transition = "1s"; // doesn't work
 }
 
 
-let deactivaePopup = (e) => {
+let deactivatePopup = (e) => {
     popId.style.display = "none";
 }
 
 window.addEventListener('scroll', (e) => {
     
     let nav = document.querySelector('.nav-wrapper');
-    
+
     nav.style.boxShadow = window.scrollY > 0 ? "0 4px 8px 0 rgba(0, 0, 0, 0.1)" : "0 0px 0px 0 rgba(0, 0, 0, 0)";
 
 });
