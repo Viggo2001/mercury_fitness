@@ -49,9 +49,9 @@ details.forEach((value, index, arr) => {
         popVar.innerHTML = `<div class="popUp-about">
                 <h2>${value.name}</h2>
                 <br>
-                <p>${value.role}</p>
-                <p>${value.email}</p>
-                <p>${value.github}</p>
+                <p><strong>Role:</strong> ${value.role}</p>
+                <p><strong>Email:</strong> ${value.email}</p>
+                <p><strong>Link:</strong> ${value.github}</p>
             </div>
             <div class="overlay" id="overlay-about" onclick="deactivateAboutPopup()"></div>` 
     });
