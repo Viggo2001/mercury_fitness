@@ -208,6 +208,7 @@ footer {
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 20px;
+    /* width: inherit; */
 }
 
 .coder img {
@@ -231,4 +232,38 @@ footer {
 .coder .details {
     padding: 30px;
     padding-top: 30px;
+}
+
+.details button {
+    padding: 5px;
+    background-color: #0F5FEB;
+    margin-top: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.popUp-wrapper {
+    position: fixed;
+    top: 33vh;
+    width: inherit;
+    display: none;
+}
+
+.popUp-about {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* width: 50%; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    width: 60%;
+    z-index: 1;
+}
+
+#overlay-about {
+    z-index: 0;
 }
