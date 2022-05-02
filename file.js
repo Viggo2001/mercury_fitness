@@ -4,7 +4,6 @@ let about_pop = document.getElementById('popUp-wrapper');
 
 let activatePopup = (e) => {
     popId.style.display = "block";
-    inPop.style.transition = "1s"; // doesn't work
 }
 
 let deactivatePopup = (e) => {
@@ -20,12 +19,12 @@ window.addEventListener('scroll', (e) => {
 });
 
 let details = [
-    {name: 'Onodwa Siyotula', description: 'Developed the Home page and the Workout Routine page with Nkululeko', img: 'images/profile.jpg', id: "odwa", role: 'Group Leader', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'},
-    {name: 'Nkululeko', description: 'Developed the Home page and the Workout Routine page with Onodwa', img: 'images/profile.jpg', id: "nkululeko", role: 'Group Member', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'},
-    {name: 'Shanlyn', description: 'Developed the Log in and Sign up pages with Tamryn', img: 'images/profile.jpg', id: "shanlyn", role: 'Group Secretary', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'},
-    {name: 'Tamryn', description: 'Developed the Log in and Sign up pages with Shanlyn', img: 'images/profile.jpg', id: "tamryn", role: 'Group Member', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'},
+    {name: 'Onodwa Siyotula', description: 'Developed the Home page and the Workout Routine page with Nkululeko', img: 'images/onodwa.jpg', id: "odwa", role: 'Group Leader', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'},
+    {name: 'Nkululeko Ngcobo', description: 'Developed the Home page and the Workout Routine page with Onodwa', img: 'images/profile.jpg', id: "nkululeko", role: 'Group Member', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'},
+    {name: 'Shanlyn Thomas', description: 'Developed the Log in and Sign up pages with Tamryn', img: 'images/profile.jpg', id: "shanlyn", role: 'Group Secretary', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'},
+    {name: 'Tamryn Lewin', description: 'Developed the Log in and Sign up pages with Shanlyn', img: 'images/profile.jpg', id: "tamryn", role: 'Group Member', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'},
     {name: 'Sinothando Masiki', description: 'Developed the actual activities page with Petlo', img: 'images/profile.jpg', id: "sino", role: 'Group Member', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'},
-    {name: 'Petlo', description: 'Developed the actual activities page with Sinothando', img: 'images/profile.jpg', id: "petlo", role: 'Group Member', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'}
+    {name: 'Petlo Matabane', description: 'Developed the actual activities page with Sinothando', img: 'images/profile.jpg', id: "petlo", role: 'Group Member', email: 'onodwasiyotula7@gmail.com', github: 'https://github.com'}
 ];
 
 details.forEach((value, index, arr) => {
@@ -45,13 +44,15 @@ details.forEach((value, index, arr) => {
 
     id.addEventListener('click', (e) => {
         about_pop.style.display = "block";
+        about_pop.style.transition = "0.4s";
 
         popVar.innerHTML = `<div class="popUp-about">
                 <h2>${value.name}</h2>
                 <br>
+                <img src="${value.img}" alt="">
                 <p><strong>Role:</strong> ${value.role}</p>
                 <p><strong>Email:</strong> ${value.email}</p>
-                <p><strong>Link:</strong> ${value.github}</p>
+                <p><strong>GitHub Link:</strong> ${value.github}</p>
             </div>
             <div class="overlay" id="overlay-about" onclick="deactivateAboutPopup()"></div>` 
     });
