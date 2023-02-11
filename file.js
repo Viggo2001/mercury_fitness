@@ -61,3 +61,5 @@ details.forEach((value, index, arr) => {
 let deactivateAboutPopup = (e) => {
     about_pop.style.display = "none";
 } 
+
+console.log('Hello World')
